@@ -7,6 +7,7 @@ ENV GRADLE_OPTS -Dorg.gradle.daemon=true
 RUN apk update && \
   apk add libstdc++ && \
   apk add bash postgresql-client && \
+  apk add nodejs && \
   mkdir bin && \
   /bin/sh installGradle.sh
 
