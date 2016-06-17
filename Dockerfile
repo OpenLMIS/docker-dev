@@ -6,8 +6,12 @@ ENV GRADLE_USER_HOME /gradle
 ENV GRADLE_OPTS -Dorg.gradle.daemon=true
 RUN apk update && \
   apk add libstdc++ && \
-  apk add bash postgresql-client && \
+  apk add bash && \
+  apk add postgresql-client && \
   apk add nodejs && \
+  apk add py-pip && \
+  pip install --upgrade pip && \
+  pip install transifex-client && \
   mkdir bin && \
   /bin/sh installGradle.sh
 
