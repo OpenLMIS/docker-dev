@@ -13,6 +13,7 @@ RUN apk update && \
   pip install --upgrade pip && \
   pip install transifex-client && \
   mkdir bin && \
+  npm install -g raml-cop && \
   /bin/sh installGradle.sh
 
 WORKDIR /app
