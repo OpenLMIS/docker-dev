@@ -15,7 +15,7 @@ RUN apk update && \
   pip install --upgrade pip && \
   pip install transifex-client && \
   mkdir bin && \
-  npm install -g raml-cop && \
+  npm install -g raml-cop@3.0.0 && \
   /bin/sh install_gradle.sh
 
 WORKDIR /app
