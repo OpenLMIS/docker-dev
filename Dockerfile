@@ -12,6 +12,7 @@ RUN apk update && \
   apk add postgresql-client && \
   apk add postgresql && \
   apk add nodejs-current-npm && \
+  apk add wget && \
   apk add py-pip && \
   pip install --upgrade pip && \
   pip install transifex-client && \
