@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:jdk8
+FROM anapsix/alpine-java:8u151b12_jdk
 
 WORKDIR /root
 
@@ -10,7 +10,8 @@ RUN apk update && \
   apk add libstdc++ && \
   apk add bash && \
   apk add postgresql-client && \
-  apk add nodejs && \
+  apk add postgresql && \
+  apk add nodejs-current-npm && \
   apk add py-pip && \
   pip install --upgrade pip && \
   pip install transifex-client && \
