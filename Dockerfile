@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u151b12_jdk
+FROM anapsix/alpine-java:8u181b13_jdk
 
 WORKDIR /root
 

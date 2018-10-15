@@ -49,8 +49,8 @@ Most interactions should occur through docker-compose.
 
 ## Tech
 
-- JDK 1.8
-- Gradle 4.0
-- Node 7+
-- PSQL 9+
+- JDK 1.8+
+- Gradle 4.10+
+- Node 8+
+- PSQL 10+
 - RAML-Cop 5
