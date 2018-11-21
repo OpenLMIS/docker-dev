@@ -24,7 +24,7 @@ WORKDIR /app
 
 COPY sync_transifex.sh /transifex/sync_transifex.sh
 COPY wait-for-postgres.sh /config/wait-for-postgres.sh
-RUN chmod u+x /wait-for-postgres.sh
+RUN chmod u+x /config/wait-for-postgres.sh
 VOLUME ["/app", "/gradle"]
 
 EXPOSE 8080
