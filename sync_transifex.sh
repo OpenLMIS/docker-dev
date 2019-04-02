@@ -40,7 +40,7 @@ while [[ $# -gt 1 ]]; do
   shift
 done
 
-tx init --host=https://www.transifex.com --user=$TRANSIFEX_USER --pass=$TRANSIFEX_PASSWORD
+tx init --host=https://www.transifex.com --user=$TRANSIFEX_USER --pass=$TRANSIFEX_PASSWORD --force --no-interactive
 
 tx set --auto-local -r $RESOURCE \
   $PATTERN --source-lang en --type UNICODEPROPERTIES \
