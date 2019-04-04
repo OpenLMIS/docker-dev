@@ -4,6 +4,12 @@ Image for launching (non-)interactive containers with gradle suitable for develo
 
 Based off of alpine-java.
 
+## Versions
+
+In v5 there is some confusion as to which Gradle is in use:
+* v5-v5.1 have Gradle 5.X
+* v5.2 has Gradle 4.X.
+
 ## Volumes
 
 - `/app` expects a Gradle project to be mounted in.  It is also the default working directory.
