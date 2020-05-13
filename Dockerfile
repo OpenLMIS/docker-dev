@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u181b13_jdk
+FROM anapsix/alpine-java:8u202b08_jdk
 
 WORKDIR /root
 
@@ -13,6 +13,7 @@ RUN apk update && \
   apk add postgresql && \
   apk add nodejs-current-npm && \
   apk add wget && \
+  apk add curl && \
   apk add py-pip && \
   pip install --upgrade pip && \
   pip install transifex-client && \
