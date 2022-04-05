@@ -1,4 +1,4 @@
-FROM anapsix/alpine-java:8u202b08_jdk
+FROM alpine:3.12
 
 WORKDIR /root
 
@@ -9,6 +9,7 @@ ENV GRADLE_OPTS -Dorg.gradle.daemon=true
 RUN apk update && \
   apk add libstdc++ && \
   apk add bash && \
+  apk add openjdk8 && \
   apk add postgresql-client && \
   apk add postgresql && \
   apk add nodejs-current-npm && \
