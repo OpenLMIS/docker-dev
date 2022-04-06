@@ -5,6 +5,7 @@ WORKDIR /root
 COPY install_gradle.sh .
 ENV GRADLE_USER_HOME /gradle
 ENV GRADLE_OPTS -Dorg.gradle.daemon=true
+ENV GIT_PYTHON_GIT_EXECUTABLE /usr/bin/git
 
 RUN apk update && \
   apk add libstdc++ && \
@@ -16,6 +17,7 @@ RUN apk update && \
   apk add wget && \
   apk add curl && \
   apk add py-pip && \
+  apk add git && \
   pip install --upgrade pip && \
   pip install transifex-client && \
   mkdir bin && \
