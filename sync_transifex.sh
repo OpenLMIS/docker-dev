@@ -46,10 +46,11 @@ tx init
 #tx set --auto-local -r $RESOURCE \
 #  $PATTERN --source-lang en --type UNICODEPROPERTIES \
 #  --source-file $SOURCE_FILE --execute
-tx add --file-filter= $PATTERN \
+tx add --file-filter=$PATTERN \
   --type=KEYVALUEJSON \
+#  --type=UNICODEPROPERTIES \
   --organization=openlmis \
-  --project= $RESOURCE \
+  --project=$RESOURCE \
   --resource=messages $SOURCE_FILE
 
 if [ "$TX_PUSH" == "true" ]; then
