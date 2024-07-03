@@ -19,7 +19,6 @@ RUN apk update && \
   apk add py-pip && \
   apk add git && \
   pip install --upgrade pip && \
-  pip install transifex-client && \
   mkdir bin && \
   npm install -g raml-cop@5.0.0 && \
   /bin/sh install_gradle.sh
@@ -29,6 +28,8 @@ WORKDIR /app
 COPY sync_transifex.sh /transifex/sync_transifex.sh
 COPY wait-for-postgres.sh /config/wait-for-postgres.sh
 RUN chmod u+x /config/wait-for-postgres.sh
+RUN apt-get update && apt-get install -y bash build-essential libfontconfig git curl bzip2
+RUN curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
 VOLUME ["/app", "/gradle"]
 
 EXPOSE 8080
