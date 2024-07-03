@@ -40,7 +40,7 @@ while [[ $# -gt 1 ]]; do
   shift
 done
 
-tx init --force --no-interactive
+tx init
 
 tx add --file-filter=$PATTERN \
   --type=UNICODEPROPERTIES \
