@@ -40,13 +40,16 @@ while [[ $# -gt 1 ]]; do
   shift
 done
 
+rm .tx/config
+
 tx init
 
 tx add --file-filter=$PATTERN \
   --type=UNICODEPROPERTIES \
   --organization=openlmis \
   --project=$RESOURCE \
-  --resource="messages ${SOURCE_FILE}"
+  --resource="messages" \
+  ${SOURCE_FILE}
 
 if [ "$TX_PUSH" == "true" ]; then
   tx push -s
