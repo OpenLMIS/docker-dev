@@ -28,7 +28,6 @@ WORKDIR /app
 COPY sync_transifex.sh /transifex/sync_transifex.sh
 COPY wait-for-postgres.sh /config/wait-for-postgres.sh
 RUN chmod u+x /config/wait-for-postgres.sh
-RUN apt-get update && apt-get install -y bash build-essential libfontconfig git curl bzip2
 RUN curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
 VOLUME ["/app", "/gradle"]
 
