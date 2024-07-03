@@ -55,18 +55,3 @@ fi
 if [ "$TX_PULL" == "true" ]; then
   tx pull -a -f
 fi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
