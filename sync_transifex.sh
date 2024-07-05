@@ -40,11 +40,16 @@ while [[ $# -gt 1 ]]; do
   shift
 done
 
-tx init --host=https://www.transifex.com --user=$TRANSIFEX_USER --pass=$TRANSIFEX_PASSWORD --force --no-interactive
+rm .tx/config
 
-tx set --auto-local -r $RESOURCE \
-  $PATTERN --source-lang en --type UNICODEPROPERTIES \
-  --source-file $SOURCE_FILE --execute
+tx init
+
+tx add --file-filter=$PATTERN \
+  --type=UNICODEPROPERTIES \
+  --organization=openlmis \
+  --project=$RESOURCE \
+  --resource="messages" \
+  ${SOURCE_FILE}
 
 if [ "$TX_PUSH" == "true" ]; then
   tx push -s

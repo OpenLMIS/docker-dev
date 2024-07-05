@@ -19,13 +19,14 @@ RUN apk update && \
   apk add py-pip && \
   apk add git && \
   pip install --upgrade pip && \
-  pip install transifex-client && \
   mkdir bin && \
   npm install -g raml-cop@5.0.0 && \
   /bin/sh install_gradle.sh
 
-WORKDIR /app
+WORKDIR /bin
+RUN curl -o- https://raw.githubusercontent.com/transifex/cli/master/install.sh | bash
 
+WORKDIR /app
 COPY sync_transifex.sh /transifex/sync_transifex.sh
 COPY wait-for-postgres.sh /config/wait-for-postgres.sh
 RUN chmod u+x /config/wait-for-postgres.sh
