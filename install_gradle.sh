@@ -2,11 +2,11 @@
 set -xe
 
 # SHA256 of gradle-5.2.1-bin.zip
-CHECKSUM=748c33ff8d216736723be4037085b8dc342c6a0f309081acf682c9803e407357
+CHECKSUM=7faa7198769f872826c8ef4f1450f839ec27f0b4d5d1e51bade63667cbccd205
 
-wget -O gradle.zip 'https://services.gradle.org/distributions/gradle-5.2.1-bin.zip'
+wget -O gradle.zip 'https://services.gradle.org/distributions/gradle-6.8.3-bin.zip'
 echo "$CHECKSUM  gradle.zip" | sha256sum -c -w -
 
 unzip gradle.zip
 rm gradle.zip
-ln -s "$HOME/gradle-5.2.1/bin/gradle" /sbin/gradle
+ln -s "$HOME/gradle-6.8.3/bin/gradle" /sbin/gradle

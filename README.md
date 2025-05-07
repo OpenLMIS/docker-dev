@@ -60,7 +60,7 @@ Most interactions should occur through docker-compose.
 ## Tech
 
 - JDK 1.8+
-- Gradle 4.10+
+- Gradle 6.8.3
 - Node 8+
 - PSQL 10+
 - RAML-Cop 5
